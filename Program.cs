@@ -6,10 +6,9 @@ using static System.Console;
 
 Clear();
 
-string[] arr; // массив строк
+string[] arr; // массив строк начальный
 int n; // количество элементов в массиве
-
-string[] array3char;
+string[] array3char; // массив строк результирующий
 
 // Ввод количества строк
 Write("Введите количество элементов: ");
@@ -18,6 +17,7 @@ n = int.Parse(ReadLine());
 arr = new string[n];
 array3char = new string[n];
 
+// ввод массива
 WriteLine("Введите массив: ");
 
 for (int i=0; i<arr.Length; i++)
@@ -26,6 +26,7 @@ for (int i=0; i<arr.Length; i++)
     arr[i] = ReadLine();
 }
 
+// формирование нового массива
 void ArrayLess3char(string[] array1, string[] array2)
 {
     int j = 0;
@@ -39,6 +40,7 @@ void ArrayLess3char(string[] array1, string[] array2)
     }
 }
 
+// вывод массива
 void PrintArray(string[] array)
 {
     for (int i = 0; i < array.Length; i++)
